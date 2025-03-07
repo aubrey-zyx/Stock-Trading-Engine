@@ -6,6 +6,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Order book for a certain ticker. Stores BUY and SELL orders in separate FIFO queues.
+ * BUY orders are sorted by price in descending order.
+ * SELL order are sorted by price in ascending order.
+ * For orders at the same price, earlier orders will be matched first.
  */
 public class OrderBook {
     private final PriorityQueueWithoutLock buyOrders = new PriorityQueueWithoutLock();
