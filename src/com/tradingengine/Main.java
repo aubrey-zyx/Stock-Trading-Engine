@@ -1,3 +1,5 @@
+package com.tradingengine;
+
 import com.tradingengine.simulation.MarketSimulation;
 
 public class Main {
